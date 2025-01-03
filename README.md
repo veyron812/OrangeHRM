@@ -20,7 +20,7 @@ Before running the tests, ensure that you have the following installed on your s
 
    This step would be slightly different for Mac/Windows/Linux
    
-   For Windows: 
+   For Windows:
    python -m venv env  (to create virtual env)
    env\Scripts\activate.bat
 
