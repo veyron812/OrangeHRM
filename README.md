@@ -33,15 +33,16 @@ Before running the tests, ensure that you have the following installed on your s
 ## Repository comments
 
 This repository was created to test Demo page with URL: https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
-PyTest was used as a framework for automated tests
-Selenium - for web browser interactions
-Beautiful Soup and Pandas - for parsing UI tables
-requests library - for API calls
-sqlite3 - for simulating data base connection
-python-dotenv  - for loading values from .env file as environmental variables
-Faker - for creating fake values (password)
-webdriver-manager - for managing webdriver version
-pytest-dependency - for managing tests dependencies
+**Technical Stack**:
+ - PyTest framework for automated tests
+ - Selenium - for web browser interactions
+ - Beautiful Soup and Pandas - for parsing UI tables
+ - requests library - for API calls
+ - sqlite3 - for simulating data base connection
+ - python-dotenv  - for loading values from .env file as environmental variables
+ - Faker - for creating fake values (password)
+ - webdriver-manager - for managing webdriver version
+ - pytest-dependency - for managing tests dependencies
 
 ## Project structure
 Project uses PyTest fixtures with different scopes: webdriver selection, database connection, API calls, password generation 
