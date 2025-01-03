@@ -4,14 +4,14 @@ from selenium.webdriver.common.by import By
 
 from pageobjects.base_page import BasePage
 
-TABLE_SEL = (By.XPATH, "//div[@role = 'table']")
+table_sel = (By.XPATH, "//div[@role = 'table']")
 
 
 class AdminPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.wait_elem(TABLE_SEL)
+        self.wait_elem(table_sel)
         time.sleep(2)
 
     def create_user(self, user_name: str, emp_name: str, user_role: str, status: str, password: str) -> None:

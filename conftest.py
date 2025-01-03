@@ -1,8 +1,6 @@
 import os
 
 import pytest
-
-import pytest
 import requests
 from dotenv import load_dotenv
 from faker import Faker
@@ -20,6 +18,7 @@ demo_url = f"{os.getenv('BASE_URL')}/web/index.php/admin/viewSystemUsers"
 
 @pytest.fixture(scope="session")
 def web_driver(request):
+    """ Fixture to select webdriver. Go through login process """
     from selenium import webdriver
     from selenium.webdriver.chrome.service import Service
     from webdriver_manager.chrome import ChromeDriverManager
@@ -45,6 +44,7 @@ def generate_password() -> str:
 
 @pytest.fixture(scope='session')
 def db_connection():
+    """ Fixture to connect to database """
     connection = sqlite3.connect(":memory:")  # In-memory SQLite DB for the test
     cursor = connection.cursor()
 
@@ -55,6 +55,7 @@ def db_connection():
 
 @pytest.fixture()
 def get_all_users():
+    """ Fixture to make GET API call for all users """
     url = f"{os.getenv('BASE_URL')}/users"
     response = requests.get(url)
     if response.status_code == "200":
