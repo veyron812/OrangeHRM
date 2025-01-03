@@ -21,12 +21,14 @@ Before running the tests, ensure that you have the following installed on your s
    This step would be slightly different for Mac/Windows/Linux
    
    For Windows:
-   python -m venv env  (to create virtual env)
-   env\Scripts\activate.bat
+   
+    - python -m venv env  (to create virtual env)
+    - env\Scripts\activate.bat
 
    For Mac:
-   python3 -m venv env  (to create virtual env)
-   source env/bin/activate
+   
+    - python3 -m venv env  (to create virtual env)
+    - source env/bin/activate
    
 
 5. Install dependencies:
