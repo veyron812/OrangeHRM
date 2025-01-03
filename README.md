@@ -18,13 +18,22 @@ Before running the tests, ensure that you have the following installed on your s
 
 3. Create virtual environment:
 
-    python -m venv venv
+   This step would be slightly different for Mac/Windows/Linux
+   
+   For Windows: 
+   python -m venv env  (to create virtual env)
+   env\Scripts\activate.bat
 
-4. Install dependencies:
+   For Mac:
+   python3 -m venv env  (to create virtual env)
+   source env/bin/activate
+   
+
+5. Install dependencies:
 
     pip install -r requirements.txt
 
-5. To run Demo tests use command:
+6. To run Demo tests use command:
 
     pytest -s -v -m demo
 
