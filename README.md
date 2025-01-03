@@ -51,7 +51,8 @@ This repository was created to test Demo page with URL:
  - webdriver selection
  - database connection
  - API calls
- - password generation 
+ - password generation
+
 **BasePage used for storing common UI actions which can be applied on any UI page**:
  - select dropdown
  - enter text
