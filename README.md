@@ -14,8 +14,7 @@ Before running the tests, ensure that you have the following installed on your s
 
 1. Clone the repository to your local machine:
 
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone
 
 3. Create virtual environment:
 
