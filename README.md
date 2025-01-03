@@ -63,7 +63,7 @@ https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
  - API calls
  - password generation
 
-**BasePage used for storing common UI actions which can be applied on any UI page**:
+**Page Object Model used. BasePage store common UI actions. Other Pages inherits from BasePage. Common actions:**:
  - select dropdown
  - enter text
  - click button
