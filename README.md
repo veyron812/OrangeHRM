@@ -36,12 +36,12 @@ https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
 
 **Technical Stack**:
  - PyTest framework for automated tests
- - Selenium - for web browser interactions
- - Beautiful Soup and Pandas - for parsing UI tables
+ - selenium - for web browser interactions
+ - beautiful soup and pandas - for parsing UI tables
  - requests library - for API calls
  - sqlite3 - for simulating data base connection
  - python-dotenv  - for loading values from .env file as environmental variables
- - Faker - for creating fake values (password)
+ - faker - for creating fake values (password)
  - webdriver-manager - for managing webdriver version
  - pytest-dependency - for managing tests dependencies
 
