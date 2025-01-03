@@ -32,7 +32,9 @@ Before running the tests, ensure that you have the following installed on your s
 
 ## Repository comments
 
-This repository was created to test Demo page with URL: https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
+This repository was created to test Demo page with URL: 
+  https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
+
 **Technical Stack**:
  - PyTest framework for automated tests
  - Selenium - for web browser interactions
@@ -45,8 +47,16 @@ This repository was created to test Demo page with URL: https://opensource-demo.
  - pytest-dependency - for managing tests dependencies
 
 ## Project structure
-Project uses PyTest fixtures with different scopes: webdriver selection, database connection, API calls, password generation 
-BasePage used for storing common UI actions which can be applied on any UI page: select dropdown, enter text, click button, wait for popup message, etc. 
+**Project uses PyTest fixtures with different scopes**: 
+ - webdriver selection
+ - database connection
+ - API calls
+ - password generation 
+**BasePage used for storing common UI actions which can be applied on any UI page**:
+ - select dropdown
+ - enter text
+ - click button
+ - wait for popup message, etc. 
 
 ## Important security information 
 Be careful. This is a Demo project, not a production code. 
