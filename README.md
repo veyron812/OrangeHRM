@@ -59,7 +59,7 @@ This repository was created to test Demo page with URL:
  - wait for popup message, etc. 
 
 ## Important security information 
-Be careful. This is a Demo project, not a production code. 
-Only because of that .env file with credentials was pushed to repository. 
-Never push .env file with credentials to repository in your production code! 
+Be careful. This is a Demo project, not a production code.  
+Only because of that .env file with credentials was pushed to repository.  
+Never push .env file with credentials to repository in your production code!  
 Store them in safe vault (LastPass, 1Password, etc.) and share only across trusted team members.
