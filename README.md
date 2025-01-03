@@ -80,8 +80,8 @@ That should be discussed with developers to create the best approach in tests.
 
 ## API assumptions
 Assumptions about API URLs were made in the project:
-base_url = https://opensource-demo.orangehrmlive.com  
-GET API for all users: 
-https://opensource-demo.orangehrmlive.com/users
-GET API for user (with specific ID): 
+base_url = https://opensource-demo.orangehrmlive.com    
+GET API for all users:  
+https://opensource-demo.orangehrmlive.com/users  
+GET API for user (with specific ID):  
 https://opensource-demo.orangehrmlive.com/user/1
