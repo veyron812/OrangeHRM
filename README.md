@@ -77,3 +77,11 @@ That should be discussed with developers to create the best approach in tests.
  - Use Reset button in the Search, assert Search values are back to default, assert table shown with all users
  - Delete User (ESS), assert User no more presented in the UI table, assert User was deleted from the database with SQL query
  - Send GET API call for all users, assert number of users in the UI table and API response is the same
+
+## API assumptions
+Assumptions about API URLs were made in the project:
+base_url = https://opensource-demo.orangehrmlive.com  
+GET API for all users: 
+https://opensource-demo.orangehrmlive.com/users
+GET API for user (with specific ID): 
+https://opensource-demo.orangehrmlive.com/user/1
