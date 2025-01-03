@@ -32,8 +32,8 @@ Before running the tests, ensure that you have the following installed on your s
 
 ## Repository comments
 
-This repository was created to test Demo page with URL: 
-  https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
+This repository was created to test Demo page with URL:  
+https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
 
 **Technical Stack**:
  - PyTest framework for automated tests
