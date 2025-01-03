@@ -63,7 +63,7 @@ https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
  - API calls
  - password generation
 
-**Page Object Model used. Web UI Pages inherit from BasePage class. BasePage describes common UI actions available across whole project:**:
+**Page Object Model used. Web UI Pages inherit from BasePage class. BasePage describes common UI actions available across whole project:**
  - select dropdown
  - enter text
  - click button
