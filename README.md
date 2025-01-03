@@ -17,15 +17,15 @@ Before running the tests, ensure that you have the following installed on your s
    git clone <repository-url>
    cd <repository-folder>
 
-2. Create virtual environment:
+3. Create virtual environment:
 
     python -m venv venv
 
-3. Install dependencies:
+4. Install dependencies:
 
     pip install -r requirements.txt
 
-4. To run Demo tests use command:
+5. To run Demo tests use command:
 
     pytest -s -v -m demo
 
