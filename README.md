@@ -63,4 +63,11 @@ https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
 Be careful. This is a Demo project, not a production code.  
 Only because of that .env file with credentials was pushed to repository.  
 Never push .env file with credentials to repository in your production code!  
-Store them in safe vault (LastPass, 1Password, etc.) and share only across trusted team members.
+Store them in safe vault (LastPass, 1Password, etc.) and share only across trusted team members.  
+
+## Known flakiness   
+Function get_current_user is used to get full name of current user.  
+Unfortunately, this value randomly changes.  
+Sometimes even during one browser session. 
+That makes tests flaky.  
+That should be discussed with developers to create the best approach in tests.
