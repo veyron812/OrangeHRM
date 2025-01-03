@@ -79,8 +79,9 @@ That should be discussed with developers to create the best approach in tests.
  - Send GET API call for all users, assert number of users in the UI table and API response is the same
 
 ## API assumptions
-Assumptions about API URLs were made in the project:
-base_url = https://opensource-demo.orangehrmlive.com    
+Assumptions about API URLs were made in the project:  
+base_url:  
+https://opensource-demo.orangehrmlive.com    
 GET API for all users:  
 https://opensource-demo.orangehrmlive.com/users  
 GET API for user (with specific ID):  
