@@ -1,8 +1,18 @@
+import time
+
+from selenium.webdriver.common.by import By
+
 from pageobjects.base_page import BasePage
+
+TABLE_SEL = (By.XPATH, "//div[@role = 'table']")
 
 
 class AdminPage(BasePage):
 
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.wait_elem(TABLE_SEL)
+        time.sleep(2)
 
     def create_user(self, user_name: str, emp_name: str, user_role: str, status: str, password: str) -> None:
         """ Function to create new user in UI """
@@ -26,6 +36,7 @@ class AdminPage(BasePage):
 
     def search_user_by_username(self, user_name: str) -> None:
         """ Function to search user by username """
+        self.btn_action('Reset')
         self.enter_text('Username', user_name)
         self.btn_action('Search')
 
@@ -41,3 +52,5 @@ class AdminPage(BasePage):
         4 values (Username, User Role, Employee Name, Status) has default values """
         assert self.get_text_field_value('Username') == ''
         assert self.get_text_field_value('Employee Name', 'placeholder') == 'Type for hints...'
+        assert self.get_dropdown_value('User Role') == "-- Select --"
+        assert self.get_dropdown_value('Status') == "-- Select --"

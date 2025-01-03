@@ -1,20 +1,21 @@
+import os
 
 import pytest
 
 import pytest
+import requests
+from dotenv import load_dotenv
 from faker import Faker
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+import sqlite3
 
 from pageobjects.login_page import LoginPage
 
 
-# from webdriver_manager.firefox import GeckoDriverManager
-# from webdriver_manager.microsoft import EdgeChromiumDriverManager
+load_dotenv()
 
-URL = "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers"
-USER_NAME = "Admin"
-PASSWORD = "admin123"
+user = os.getenv('USERNAME')
+password = os.getenv('PASSWORD')
+demo_url = f"{os.getenv('BASE_URL')}/web/index.php/admin/viewSystemUsers"
 
 
 @pytest.fixture(scope="session")
@@ -28,8 +29,8 @@ def web_driver(request):
     )
     web_driver.maximize_window()
 
-    web_driver.get(URL)
-    LoginPage(web_driver).perform_login_action(USER_NAME, PASSWORD)
+    web_driver.get(demo_url)
+    LoginPage(web_driver).perform_login_action(user, password)
     yield web_driver
     web_driver.quit()
 
@@ -38,5 +39,24 @@ def web_driver(request):
 def generate_password() -> str:
     """ Fixture to generate 12 digits password with upper and lower letters, numbers and special characters"""
     faker = Faker()
-    password = faker.password(length=12, special_chars=True, digits=True, upper_case=True, lower_case=True)
-    return password
+    password_12 = faker.password(length=12, special_chars=True, digits=True, upper_case=True, lower_case=True)
+    return password_12
+
+
+@pytest.fixture(scope='session')
+def db_connection():
+    connection = sqlite3.connect(":memory:")  # In-memory SQLite DB for the test
+    cursor = connection.cursor()
+
+    yield connection  # Provide the connection to tests
+
+    connection.close()
+
+
+@pytest.fixture()
+def get_all_users():
+    url = f"{os.getenv('BASE_URL')}/users"
+    response = requests.get(url)
+    if response.status_code == "200":
+        data = response.json()
+        return data
