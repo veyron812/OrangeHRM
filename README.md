@@ -71,3 +71,10 @@ Unfortunately, this value randomly changes.
 Sometimes even during one browser session. 
 That makes tests flaky.  
 That should be discussed with developers to create the best approach in tests.
+
+## Code execution workflow
+ - Create 2 users (1 - Admin, 2 - ESS), assert confiramtion popup message was created
+ - Search both users by username on the Admin page (assert Search works as expected)
+ - Use Reset button in the Search, assert Search values are back to default, assert table shown with all users
+ - Delete User (ESS), assert User no more presented in the UI table, assert User was deleted from the database with SQL query
+ - Send GET API call for all users, assert number of users in the UI table and API response is the same
