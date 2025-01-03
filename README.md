@@ -57,7 +57,7 @@ https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
  - pytest-dependency - for managing tests dependencies
 
 ## Project structure
-**Project uses PyTest fixtures with different scopes**: 
+**Project uses PyTest fixtures with different scopes for different puproses**: 
  - webdriver selection
  - database connection
  - API calls
